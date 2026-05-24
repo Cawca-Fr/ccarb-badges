@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profil CCARB - Jean Dupont</title>
+    <style>
+        /* Styles CSS */
+        :root {
+            --primary-color: #0056b3; /* Bleu institutionnel */
+            --bg-color: #f4f7f6;
+            --text-main: #333333;
+            --text-muted: #666666;
+            --white: #ffffff;
+        }
+
+        body {
+            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            background-color: var(--bg-color);
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            min-height: 100vh;
+        }
+
+        /* Conteneur principal simulant l'écran mobile */
+        .profile-container {
+            width: 100%;
+            max-width: 400px; /* Limite la largeur sur ordinateur */
+            background-color: var(--white);
+            min-height: 100vh;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+            display: flex;
+            flex-direction: column;
+        }
+
+        /* En-tête */
+        .header {
+            background-color: var(--primary-color);
+            color: var(--white);
+            text-align: center;
+            padding: 20px 15px;
+            border-bottom-left-radius: 20px;
+            border-bottom-right-radius: 20px;
+        }
+
+        .header h1 {
+            margin: 0;
+            font-size: 1.2rem;
+            font-weight: 600;
+        }
+
+        /* Section Avatar et Informations */
+        .profile-info {
+            text-align: center;
+            padding: 30px 20px 10px 20px;
+            margin-top: -10px;
+        }
+
+        .avatar {
+            width: 100px;
+            height: 100px;
+            background-color: #e0e0e0;
+            border-radius: 50%;
+            margin: 0 auto 15px auto;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2.5rem;
+            color: var(--white);
+            border: 4px solid var(--white);
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+
+        .name {
+            font-size: 1.5rem;
+            color: var(--text-main);
+            margin: 0 0 5px 0;
+            font-weight: 700;
+        }
+
+        .job-title {
+            font-size: 1rem;
+            color: var(--primary-color);
+            margin: 0 0 5px 0;
+            font-weight: 500;
+        }
+
+        .department {
+            font-size: 0.9rem;
+            color: var(--text-muted);
+            margin: 0 0 20px 0;
+        }
+
+        /* Boutons d'action */
+        .actions {
+            padding: 15px 20px;
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+
+        .btn {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 15px;
+            border-radius: 10px;
+            text-decoration: none;
+            font-size: 1rem;
+            font-weight: 600;
+            transition: background-color 0.2s;
+        }
+
+        .btn-call {
+            background-color: #27ae60;
+            color: var(--white);
+        }
+
+        .btn-email {
+            background-color: var(--primary-color);
+            color: var(--white);
+        }
+
+        .btn-website {
+            background-color: #ecf0f1;
+            color: var(--text-main);
+        }
+
+        .btn:active {
+            opacity: 0.8;
+        }
+
+        /* Icônes (utilisant des emojis pour simplifier le code sans dépendances) */
+        .icon {
+            margin-right: 10px;
+            font-size: 1.2rem;
+        }
+
+        /* Pied de page */
+        .footer {
+            margin-top: auto;
+            text-align: center;
+            padding: 20px;
+            background-color: var(--white);
+            border-top: 1px solid #eeeeee;
+        }
+
+        .footer p {
+            margin: 0;
+            font-size: 0.8rem;
+            color: var(--text-muted);
+        }
+
+        .cirtel-brand {
+            font-weight: 700;
+            color: #d35400; /* Couleur pour différencier la marque */
+        }
+    </style>
+</head>
+<body>
+
+    <div class="profile-container">
+        
+        <div class="header">
+            <h1>Communauté de Communes Alsace Rhin Brisach</h1>
+        </div>
+
+        <div class="profile-info">
+            <div class="avatar">👤</div>
+            <h2 class="name">Jean Dupont</h2>
+            <p class="job-title">Responsable Technique Informatique</p>
+            <p class="department">Direction des Systèmes d'Information</p>
+        </div>
+
+        <div class="actions">
+            <a href="tel:+33389000000" class="btn btn-call">
+                <span class="icon">📞</span> Appeler
+            </a>
+            
+            <a href="mailto:j.dupont@alsacerhinbrisach.fr" class="btn btn-email">
+                <span class="icon">✉️</span> Envoyer un e-mail
+            </a>
+
+            <a href="https://www.alsacerhinbrisach.fr" target="_blank" class="btn btn-website">
+                <span class="icon">🌐</span> Visiter le site web
+            </a>
+        </div>
+
+        <div class="footer">
+            <p>Partenaire Technique : <span class="cirtel-brand">CIRTEL</span></p>
+        </div>
+
+    </div>
+
+</body>
+</html>
