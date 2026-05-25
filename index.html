@@ -7,7 +7,7 @@
     <style>
         /* Styles CSS */
         :root {
-            --primary-color: #0056b3; /* Bleu institutionnel */
+            --primary-color: #0056b3; 
             --bg-color: #f4f7f6;
             --text-main: #333333;
             --text-muted: #666666;
@@ -28,7 +28,7 @@
         /* Conteneur principal simulant l'écran mobile */
         .profile-container {
             width: 100%;
-            max-width: 400px; /* Limite la largeur sur ordinateur */
+            max-width: 400px; 
             background-color: var(--white);
             min-height: 100vh;
             box-shadow: 0 4px 12px rgba(0,0,0,0.1);
@@ -94,7 +94,7 @@
             margin: 0 0 20px 0;
         }
 
-        /* Boutons d'action */
+        /* Boutons d'action mis à jour */
         .actions {
             padding: 15px 20px;
             display: flex;
@@ -105,13 +105,11 @@
         .btn {
             display: flex;
             align-items: center;
-            justify-content: center;
-            padding: 15px;
+            justify-content: flex-start; /* Aligné à gauche pour la lisibilité */
+            padding: 12px 18px;
             border-radius: 10px;
             text-decoration: none;
-            font-size: 1rem;
-            font-weight: 600;
-            transition: background-color 0.2s;
+            transition: opacity 0.2s;
         }
 
         .btn-call {
@@ -133,10 +131,32 @@
             opacity: 0.8;
         }
 
-        /* Icônes (utilisant des emojis pour simplifier le code sans dépendances) */
+        /* Structure interne des boutons (Icône + Texte) */
         .icon {
-            margin-right: 10px;
-            font-size: 1.2rem;
+            margin-right: 15px;
+            font-size: 1.5rem;
+        }
+
+        .btn-content {
+            display: flex;
+            flex-direction: column;
+            text-align: left;
+            overflow: hidden; /* Empêche le texte de dépasser */
+        }
+
+        .btn-title {
+            font-size: 0.9rem;
+            font-weight: 700;
+            margin-bottom: 2px;
+        }
+
+        .btn-value {
+            font-size: 0.85rem;
+            font-weight: 400;
+            opacity: 0.9;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis; /* Ajoute "..." si l'email est trop long pour l'écran */
         }
 
         /* Pied de page */
@@ -156,7 +176,7 @@
 
         .cirtel-brand {
             font-weight: 700;
-            color: #d35400; /* Couleur pour différencier la marque */
+            color: #d35400; 
         }
     </style>
 </head>
@@ -164,10 +184,12 @@
 
     <div class="profile-container">
         
+        <!-- En-tête de la page -->
         <div class="header">
             <h1>Communauté de Communes Alsace Rhin Brisach</h1>
         </div>
 
+        <!-- Informations de l'agent -->
         <div class="profile-info">
             <div class="avatar">👤</div>
             <h2 class="name">Jean Dupont</h2>
@@ -175,20 +197,39 @@
             <p class="department">Direction des Systèmes d'Information</p>
         </div>
 
+        <!-- Boutons de contact avec infos visibles -->
         <div class="actions">
+            
+            <!-- Bouton Téléphone -->
             <a href="tel:+33389000000" class="btn btn-call">
-                <span class="icon">📞</span> Appeler
+                <span class="icon">📞</span>
+                <div class="btn-content">
+                    <span class="btn-title">Appeler</span>
+                    <span class="btn-value">+33 3 89 00 00 00</span>
+                </div>
             </a>
             
+            <!-- Bouton E-mail -->
             <a href="mailto:j.dupont@alsacerhinbrisach.fr" class="btn btn-email">
-                <span class="icon">✉️</span> Envoyer un e-mail
+                <span class="icon">✉️</span>
+                <div class="btn-content">
+                    <span class="btn-title">Envoyer un e-mail</span>
+                    <span class="btn-value">j.dupont@alsacerhinbrisach.fr</span>
+                </div>
             </a>
 
+            <!-- Lien vers le site -->
             <a href="https://www.alsacerhinbrisach.fr" target="_blank" class="btn btn-website">
-                <span class="icon">🌐</span> Visiter le site web
+                <span class="icon">🌐</span>
+                <div class="btn-content">
+                    <span class="btn-title">Site Web</span>
+                    <span class="btn-value">www.alsacerhinbrisach.fr</span>
+                </div>
             </a>
+            
         </div>
 
+        <!-- Pied de page avec mention CIRTEL -->
         <div class="footer">
             <p>Partenaire Technique : <span class="cirtel-brand">CIRTEL</span></p>
         </div>
